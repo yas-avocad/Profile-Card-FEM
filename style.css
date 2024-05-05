@@ -1,0 +1,155 @@
+:root {
+  --Dark-cyan: hsl(185, 75%, 39%);
+  --Very-dark-desaturated-blue: hsl(229, 23%, 23%);
+  --Very-dark-desaturated-blue-shadow: hsl(229, 23%, 23%, .5);
+  --Dark-grayish-blue: hsl(227, 10%, 46%);
+  --Dark-gray: hsl(0, 0%, 59%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  border: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  min-height: 100svh;
+
+  font-family: Kumbh Sans;
+  font-size: 1.125rem;  
+
+  background-color: var(--Dark-cyan);
+  background-image: url("images/bg-pattern-top.svg"), url("images/bg-pattern-bottom.svg");  
+  background-repeat: no-repeat, no-repeat;
+  background-position: -780px -590px, 150px 250px;
+  background-position: relative;
+}
+
+
+section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  border-radius: 15px;
+  position: relative;
+  box-shadow: 0 50px 100px -20px var(--Very-dark-desaturated-blue-shadow);
+}
+
+.profile-pic {
+  height: 96px;
+  width: 96px;
+  border-radius: 59px;
+  border: 5px solid white;
+  margin-bottom: 24px;
+}
+
+.profile {
+  position: absolute;
+  top: 87px;
+
+}
+
+
+.background-card {
+  width: 326px;
+  height: 140px;
+  border-top-right-radius: 15px;
+  border-top-left-radius: 15px;
+  height: 100%;
+  width: 100%;
+}
+
+.user-info {
+  margin-top: 72px;
+}
+
+.name {
+  font-weight: bold;
+  display: inline-block;
+}
+
+.age {
+  display: inline-block;
+  color: var(--Dark-gray);
+}
+
+.location {
+  text-align: center;
+  color: var(--Dark-gray);
+  font-size: .875rem;
+  margin-top: 8px;
+  margin-bottom: 24px;
+}
+
+.line {
+  height: 1px;
+  background-color: #E8E9EC;
+  width: 100%;
+
+}
+
+.user-stats-container {
+  display: flex;
+  flex-direction: row;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  padding-top: 24px;
+  padding-bottom: 24px;
+
+  /*
+  52px 24px 41px;
+  */
+
+}
+
+.user-stats {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  justify-content: center;
+  align-items: center;
+}
+
+.middle {
+  margin-left: 28px;
+  margin-right: 46px;
+}
+
+.number {
+  font-weight: bold;
+}
+
+.unit {
+  font-size: .625rem;
+  letter-spacing: 1.5px;
+}
+
+@media (min-width: 1000px) {
+  body {
+    background-position: -270px -510px, 650px 450px;
+  }
+
+  .background-card {
+    width: 350px;
+    height: 140px;
+  }
+
+  
+  .location {
+    margin-top: 8px;
+    margin-bottom: 28px;
+  }
+
+  .middle {
+    margin-left: 46px;
+    margin-right: 54px;
+  }
+
+
+}
